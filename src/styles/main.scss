@@ -1,0 +1,148 @@
+// Responsividade
+@media only screen and (max-width: 768px) {
+    // Estilos para telas menores que 768px
+    .section__title {
+        font-size: 1.5em; // Tamanho de fonte menor para títulos de seção
+    }
+
+    .ator-foto {
+        width: 80px; // Tamanho menor para fotos de atores
+        height: 80px;
+    }
+
+    .button {
+        font-size: 0.8em; // Tamanho de fonte menor para botões
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    // Estilos para telas menores que 480px
+    .section__title {
+        font-size: 1.2em; // Tamanho de fonte ainda menor para títulos de seção
+    }
+
+    .ator-foto {
+        width: 60px; // Tamanho ainda menor para fotos de atores
+        height: 60px;
+    }
+
+    .button {
+        font-size: 0.7em; // Tamanho de fonte ainda menor para botões
+    }
+}
+
+// Estilos Gerais
+body {
+    background-color: #e4d8d8;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    .header {
+        color: #f8f5f5;
+        text-align: center;
+    
+        &__title {
+            font-size: 3em;
+            margin-bottom: 89px;
+    
+            @media only screen and (max-width: 768px) {
+                font-size: 2em; // Tamanho menor para telas menores que 768px
+            }
+    
+            @media only screen and (max-width: 480px) {
+                font-size: 1.5em; // Tamanho menor para telas menores que 480px
+            }
+        }
+    }
+    
+}
+
+// Seções
+.section {
+    padding: 40px 20px;
+    text-align: center;
+
+    // Sinopse, Elenco, Trailer, Galeria
+    &__title {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    // Call-to-Action
+    &__cta {
+        a {
+            @extend .button;
+        }
+    }
+}
+
+// Elenco
+.elenco {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    // Ator Item
+    &__item {
+        list-style-type: none; // Remove bullets (marcadores)
+        margin: 10px;
+
+        // Ator Container
+        &-container {
+            margin: 10px;
+
+            // Ator Foto
+            &-foto {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+// Galeria
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    // Imagem na Galeria
+    img {
+        width: 33%; // Uma imagem por linha em telas maiores
+        margin: 10px;
+    }
+}
+
+// Botão CTA
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 24px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #555;
+    }
+}
+
+// Rodapé
+.footer {
+    background-color: #333;
+    color: #f8f5f5;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
